@@ -87,8 +87,9 @@ def num2rus(number):
 
         # Merge the resulting values ​​with those of the previous triplets
         result = '%s %s %s' % (preresult, wordform, result)
-        # Trim double spaces and make the first letter is capitalized
-        result = " ".join(result.split()).capitalize()
+
+    # Trim double spaces and make the first letter is capitalized
+    result = " ".join(result.split()).capitalize()
 
     return result
 
