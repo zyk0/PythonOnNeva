@@ -1,9 +1,10 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 '''
 Conway's Game of Life
 
 Ever row - 1 int
-Ever bit - 1 cell
+Ever cell - 1 bit
 '''
 
 
