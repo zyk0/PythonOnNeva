@@ -16,6 +16,8 @@ class Build_area():
         line = [self.empty_sell for x in xrange(self.width)]
         self.area = [line for x in xrange(self.height)]
 
+        print 1
+
 
 
 if __name__ == '__main__':
