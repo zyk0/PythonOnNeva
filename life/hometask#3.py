@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from time import sleep
-
 class Board:
-    cell  = 'X'
+    cell  = 'O'
     blank = ' '
 
     def __init__(self, (width, height)):
@@ -37,12 +35,8 @@ class Board:
         self.content[y][x] = self.cell
 
     def add_many(self, *seq):
-        for position in seq: self.add(position)
-
-    def add_predicate(self, predicate):
-        for position in self.coordinates():
-            if predicate(position):
-                self.add(position)
+        for position in seq:
+            self.add(position)
 
     def remove(self, (x, y)):
         self.content[y][x] = self.blank
@@ -58,7 +52,6 @@ class Board:
                 return False
         else:
             return False
-
 
     def coordinates(self):
         for x in xrange(self.width):
@@ -83,9 +76,9 @@ class Board:
             self.remove(cell)
 
     def __repr__(self):
-        #for row in self.content:
-
         return "\n".join(" ".join(cell for cell in row) for row in self.content)
+
+from time import sleep
 
 def build_field():
     field = Board((45, 20))
@@ -110,10 +103,13 @@ def build_field():
 
     return field
 
+import time
+
 if __name__ == '__main__':
     field = build_field()
     print field
-    raw_input("press enter")
+    raw_input("next? press enter")
     for i in xrange(1, 501):
         field.next_step()
-        sleep(0.1)
+        print field
+        sleep(0.2)
