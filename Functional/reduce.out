@@ -1,0 +1,17 @@
+         260004 function calls in 53.534 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   53.534   53.534 reduce.py:12(<module>)
+-------------------------------------------------------------------------------------------
+        1    0.120    0.120   26.871   26.871 reduce.py:12(myreduce)
+   129999   26.749    0.000   26.749    0.000 reduce.py:19(<lambda>)      <== myreduce
+   129999   26.573    0.000   26.573    0.000 reduce.py:20(<lambda>)      <== build-in 
+-------------------------------------------------------------------------------------------
+        1    0.000    0.000    0.000    0.000 {len}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.001    0.001    0.001    0.001 {range}
+        1    0.090    0.090   26.663   26.663 {reduce}
+
+
