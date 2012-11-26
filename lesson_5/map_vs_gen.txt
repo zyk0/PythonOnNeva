@@ -1,0 +1,9 @@
+timeit options:
+  -n/--number N: how many times to execute 'statement' (default: see below)
+  -s/--setup S: statement to be executed once initially (default 'pass')
+
+python -mtimeit -n 1000000 -s 'a = xrange(10)' 'map(lambda x: x**x, a)'
+1000000 loops, best of 3: 3.15 usec per loop
+
+python -mtimeit -n 1000000 -s 'a = xrange(10)' '[x**x for x in a]'
+1000000 loops, best of 3: 1.87 usec per loop
