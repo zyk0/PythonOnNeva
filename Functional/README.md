@@ -10,10 +10,9 @@ map:
 
 zip:
 --
-        1    2.862    0.000    3.213    0.000 zip.py:12(myzip)     <== myZip
-        1    3.553    3.553    3.553    3.553 (zip)                <== built-in function
+        1    2.019    0.000    2.350    0.000 zip.py:12(myzip)     <== myZip
+        1    1.366    1.366    1.366    1.366 {zip}                <== built-in function
 --
-то же.. myZip получается быстрее????
 
 filter:
 --
