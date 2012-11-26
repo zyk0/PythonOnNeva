@@ -10,14 +10,17 @@
 
 
 def myzip(*args):
-    for i in range(len(args[0])):
+    minlen = len(args[0])
+    for item in args: minlen = min(minlen, len(item))
+
+    for i in xrange(minlen):
         arg = []
         for item in args:
             arg.append(item[i])
         yield tuple(arg)
 
 if __name__ == '__main__':
-    x2 = list(myzip(range(1500000), range(15000000), range(15000000)))
-    x1 = list(zip(range(15000000), range(15000000), range(15000000)))
+    x2 = list(myzip(range(2500000), range(1500000), range(1900000)))
+    x1 = list(zip(range(1500000), range(25000000), range(19000000)))
     # print x2
     # print x1

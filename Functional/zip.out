@@ -39,4 +39,24 @@
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
         7    0.653    0.093    0.653    0.093 {range}
 
+******************************************************************
+*                                                                *
+*  Вызов ZIP с тремя после добавления проверки                   *
+*                                                                *
+******************************************************************
+
+         6000017 function calls in 4.886 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.723    0.723    4.886    4.886 zip.py:12(<module>)
+  1500001    2.019    0.000    2.350    0.000 zip.py:12(myzip)
+        4    0.000    0.000    0.000    0.000 {len}
+  4500000    0.331    0.000    0.331    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        3    0.000    0.000    0.000    0.000 {min}
+        6    0.448    0.075    0.448    0.075 {range}
+        1    1.366    1.366    1.366    1.366 {zip}
+
 
