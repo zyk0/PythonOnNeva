@@ -10,27 +10,27 @@ __version__ = "0.1"
 __email__ = "slava@shvec.com"
 
 def my_zip_with_none(*args):
-	"""
-	By default, zip() function not returns None values, but my_map() function need that.
-	So, in this function I fixed this using IndexError exception.
-	"""
-	minimum_length = len(max(args, key=len))
-	result = [[] for i in xrange(minimum_length)]
+    """
+    By default, zip() function not returns None values, but my_map() function need that.
+    So, in this function I fixed this using IndexError exception.
+    """
+    minimum_length = len(max(args, key=len))
+    result = [[] for i in xrange(minimum_length)]
 
-	for arg in args:
-		for i, list in enumerate(result):
-			try:
-				list.append(arg[i])
-			except IndexError:
-				list.append(None)
+    for arg in args:
+        for i, list in enumerate(result):
+            try:
+                list.append(arg[i])
+            except IndexError:
+                list.append(None)
 
-	return [tuple(x) for x in result]
+    return [tuple(x) for x in result]
 
 def my_map(function, *args):
-	result = []
-	for args in my_zip_with_none(*args):
-		result.append(function(*args))
-	return result
+    result = []
+    for args in my_zip_with_none(*args):
+        result.append(function(*args))
+    return result
 
 
 ###############################################################################
@@ -42,7 +42,7 @@ b = [2, 1, -1, 4, 6]
 c = [5, 4, 6, 9]
 
 def spam(x, y):
-	return x * y
+    return x * y
 
 map(spam, a, b)
 # [14, 2, -3, 40, 72]
@@ -51,7 +51,7 @@ my_map(spam, a, b)
 # [14, 2, -3, 40, 72]
 
 def spam2(x, y, z):
-	return x ** y, z
+    return x ** y, z
 
 map(spam2, a, b, c)
 # [(49, 5), (2, 4), (0.3333333333333333, 6), (10000, 9), (2985984, None)]
@@ -68,11 +68,11 @@ map(lambda x, y: x*y, xrange(100000), xrange(100000))
 my_map(lambda x, y: x*y, xrange(100000), xrange(100000))
 
 def spam(x, y):
-	if x is None:
-		x = 0
-	if y is None:
-		y = 0
-	return x + y
+    if x is None:
+        x = 0
+    if y is None:
+        y = 0
+    return x + y
 
 map(spam, xrange(130000), xrange(100000))
 

@@ -10,14 +10,14 @@ __version__ = "0.1"
 __email__ = "slava@shvec.com"
 
 def my_zip(*args):
-	minimum_length = len(min(args, key=len))
-	result = [[] for i in xrange(minimum_length)]
+    minimum_length = len(min(args, key=len))
+    result = [[] for i in xrange(minimum_length)]
 
-	for arg in args:
-		for i, list in enumerate(result):
-			list.append(arg[i])
+    for arg in args:
+        for i, list in enumerate(result):
+            list.append(arg[i])
 
-	return [tuple(x) for x in result]
+    return [tuple(x) for x in result]
 
 ###############################################################################
 

@@ -10,15 +10,15 @@ __version__ = "0.1"
 __email__ = "slava@shvec.com"
 
 def my_reduce(function, iterable, initializer=None):
-	iterator = iter(iterable)
+    iterator = iter(iterable)
 
-	if initializer is not None:
-		result = initializer
-	else:
-		result = next(iterator)
-	for x in iterator:
-		result = function(result, x)
-	return result
+    if initializer is not None:
+        result = initializer
+    else:
+        result = next(iterator)
+    for x in iterator:
+        result = function(result, x)
+    return result
 
 
 ###############################################################################
@@ -28,7 +28,7 @@ def my_reduce(function, iterable, initializer=None):
 numbers = xrange(1, 10)
 
 def spam(x, y):
-	return x * y
+    return x * y
 
 reduce(spam, numbers, 10)
 # 3628800

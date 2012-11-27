@@ -10,7 +10,7 @@ __version__ = "0.1"
 __email__ = "slava@shvec.com"
 
 def my_filter(function, iterable):
-	return [x for x in iterable if function(x)]
+    return [x for x in iterable if function(x)]
 
 
 ###############################################################################
@@ -20,7 +20,7 @@ def my_filter(function, iterable):
 numbers = xrange(-10, 10)
 
 def spam(x):
-	return x > 5
+    return x > 5
 
 my_filter(spam, numbers)
 # [6, 7, 8, 9]
